@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="983d864c-01d5-43fc-8ec7-1c721a0be76a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idpersonal" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from personales where idpersonales= $P{idpersonal};]]>
+	</queryString>
+	<field name="idpersonales" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="apellido" class="java.lang.String"/>
+	<field name="ci" class="java.lang.String"/>
+	<field name="telefono" class="java.lang.String"/>
+	<field name="idciudad" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="145" splitType="Stretch">
+			<staticText>
+				<reportElement x="65" y="101" width="441" height="43" uuid="c4698bbb-0f07-45ea-9462-0c56f2ebb814"/>
+				<textElement textAlignment="Center">
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[Reporte de Personales]]></text>
+			</staticText>
+			<image>
+				<reportElement x="27" y="0" width="148" height="93" uuid="b21491af-1e3d-46c4-81a3-23fa980d4818"/>
+				<imageExpression><![CDATA[".\\animal.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="147" y="73" width="100" height="20" uuid="1f186766-3100-41b4-9f49-217bfeec0a3e"/>
+				<text><![CDATA[Direccion: Filadelfia ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="392" y="5" width="100" height="20" uuid="e4cb2302-cb83-4beb-93a3-416756e0476e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="144" y="2" width="114" height="20" uuid="974b3085-7aae-4fb5-94db-aa0c146d18ee"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Espacio Animal ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="73" width="119" height="20" uuid="29491901-279c-40a7-b2c8-ea70813b763b"/>
+				<text><![CDATA[Telefono: 0986-356-074]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="41" width="100" height="20" uuid="25521b7f-14c7-4c87-97e2-ef2302d90274"/>
+				<text><![CDATA[RUC: 12345-0]]></text>
+			</staticText>
+			<textField pattern="h.mm a">
+				<reportElement x="486" y="4" width="53" height="20" uuid="41536f75-289f-415c-aaaf-2cb800455040"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="292" y="0" width="100" height="33" uuid="9934d54f-cc81-45c2-bf95-d5b749835435"/>
+				<text><![CDATA[Fecha y hora de impresion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="41" width="161" height="20" uuid="c34d8501-bb39-4c77-a53a-13c595cc09f8"/>
+				<text><![CDATA[Correo: espacioani@gmail.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="102" width="555" height="1" uuid="0b2bb23c-b1f8-4a39-a584-ebd31449cbe2"/>
+			</line>
+			<line>
+				<reportElement x="1" y="144" width="555" height="1" uuid="45e9ce69-06dc-4c14-af5d-a62e69ba18df"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="253" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="65" y="11" width="441" height="196" uuid="05b7defa-2ef4-4e94-b67a-5b52dd5fa685"/>
+			</rectangle>
+			<textField>
+				<reportElement x="255" y="18" width="100" height="20" uuid="080eebd3-440a-4558-91cd-773655da0f19"/>
+				<textFieldExpression><![CDATA[$F{idpersonales}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="105" y="18" width="100" height="20" backcolor="#99FFFF" uuid="87ea2879-fb14-45de-944e-b61cfbf2dec0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[idpersonales]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="258" y="45" width="100" height="20" uuid="42b21b7a-a180-41ed-9f86-3f576bda9694"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="105" y="45" width="100" height="20" backcolor="#99FFFF" uuid="14233401-af92-42e0-866e-67aa936d618e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="255" y="79" width="100" height="20" uuid="bcab463f-c55c-4033-a728-6f74e473039d"/>
+				<textFieldExpression><![CDATA[$F{apellido}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="105" y="79" width="100" height="20" backcolor="#99FFFF" uuid="a7c04e28-a69b-4c3c-9a2d-f34ccffa9cb6"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[apellido]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="258" y="110" width="100" height="20" uuid="7e24f23e-40bb-4f43-aa8e-70e018130ae5"/>
+				<textFieldExpression><![CDATA[$F{ci}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="105" y="110" width="100" height="20" backcolor="#99FFFF" uuid="7f823b10-4a74-4249-9404-5109e3670e3f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ci]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="258" y="143" width="100" height="20" uuid="619231d8-abf4-4398-9a2a-01360d91efe7"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="105" y="143" width="100" height="20" backcolor="#99FFFF" uuid="a936d9df-5c38-427e-9132-de8515f8c0a6"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[telefono]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="258" y="176" width="100" height="20" uuid="0d439a39-7240-4aaa-a464-3f2bc980ba9e"/>
+				<textFieldExpression><![CDATA[$F{idciudad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="105" y="176" width="100" height="20" backcolor="#99FFFF" uuid="0403f9bb-a7a1-4980-a685-35d20685bc9c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[idciudad]]></text>
+			</staticText>
+			<line>
+				<reportElement x="65" y="42" width="441" height="1" uuid="4ce8a1cd-0bd0-4f76-a91d-ca2f74b1fb7f"/>
+			</line>
+			<line>
+				<reportElement x="65" y="70" width="441" height="1" uuid="5f10daef-7470-445b-928c-1f546ab1205f"/>
+			</line>
+			<line>
+				<reportElement x="65" y="104" width="441" height="1" uuid="de1b4124-6081-4174-a5ba-c227b390be43"/>
+			</line>
+			<line>
+				<reportElement x="66" y="134" width="441" height="1" uuid="6cc769f9-f96a-4fe9-8c83-1cf9cff2d32b"/>
+			</line>
+			<line>
+				<reportElement x="66" y="167" width="441" height="1" uuid="28dcfacc-aa13-4dc9-8d4c-7ad55cc2cc80"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="175" y="12" width="80" height="20" uuid="571d125a-b20a-4fd0-be84-1951fe60459d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="271" y="12" width="40" height="20" uuid="3114d5f5-5e28-4629-8e35-aed91c5d451c"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

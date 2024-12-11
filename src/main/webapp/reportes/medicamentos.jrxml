@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3469450b-a57a-45ee-9dd0-4790039cef89">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from medicamentos]]>
+	</queryString>
+	<field name="idmedicamentos" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="vencimiento" class="java.lang.String"/>
+	<field name="lote" class="java.lang.String"/>
+	<field name="codigodebarras" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="164" splitType="Stretch">
+			<staticText>
+				<reportElement x="129" y="12" width="114" height="20" uuid="6aad14eb-996f-4263-bb83-447ec57b78cd"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Espacio Animal ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="51" width="100" height="20" uuid="5ae88a60-9812-4529-9809-60815c346d65"/>
+				<text><![CDATA[RUC: 12345-0]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="112" width="555" height="1" uuid="b629bdfd-37b4-473c-a522-c538587e7773"/>
+			</line>
+			<staticText>
+				<reportElement x="277" y="10" width="100" height="33" uuid="9c92f8ec-e691-4411-90b9-d8ce6ba936d3"/>
+				<text><![CDATA[Fecha y hora de impresion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="83" width="119" height="20" uuid="08763fbb-0016-4a2f-a3f8-beec673821fe"/>
+				<text><![CDATA[Telefono: 0986-356-074]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="117" width="531" height="38" uuid="8d47bff7-6bb9-436f-b0f6-a76c7d3177cf"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTADO MEDICAMENTOS ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="377" y="15" width="100" height="20" uuid="c5613f92-687d-47ed-bb73-50c7d135055f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="12" y="10" width="148" height="93" uuid="65bb16bd-350b-4a98-bd3e-d3bd24b5e116"/>
+				<imageExpression><![CDATA[".\\animal.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="277" y="51" width="161" height="20" uuid="63fd8c63-d340-4705-a142-72325ff626f7"/>
+				<text><![CDATA[Correo: espacioani@gmail.com]]></text>
+			</staticText>
+			<textField pattern="h.mm a">
+				<reportElement x="483" y="15" width="53" height="20" uuid="42f4ae9e-a5d7-4145-83ce-add79f9024c5"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="132" y="83" width="100" height="20" uuid="79a13999-949d-4cfa-a75e-6a6f769d3af4"/>
+				<text><![CDATA[Direccion: Filadelfia ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="155" width="555" height="1" uuid="5f573ef2-5dab-4321-8462-106f4e373841"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="2" width="107" height="20" backcolor="#99FFFF" uuid="bb0a5aee-debe-4fc5-8353-298fd2dd7d7f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[IDMEDICAMENTOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="107" y="2" width="114" height="20" backcolor="#99FFFF" uuid="09ebbfc9-5c56-46c3-ad86-37b4a89e04c0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="221" y="2" width="132" height="20" backcolor="#99FFFF" uuid="93c4ea56-b2f6-4d93-b4e4-53168f281f15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[VENCIMIENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="353" y="2" width="62" height="20" backcolor="#99FFFF" uuid="97872b93-4339-4f0e-a09f-82da6fef3607"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[LOTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="415" y="2" width="140" height="20" backcolor="#99FFFF" uuid="d1fa1744-fb26-4ad7-9ab4-c504e21996a7"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[CODIGODEBARRAS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="145" y="0" width="87" height="20" uuid="f920ec69-a8fc-46a0-bd76-202e6b57006d"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="0" width="87" height="20" uuid="057f663a-d06e-47f3-80f8-e78cad400311"/>
+				<textFieldExpression><![CDATA[$F{vencimiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="0" width="56" height="20" uuid="e9803175-947e-4677-8a2b-be28d2752da9"/>
+				<textFieldExpression><![CDATA[$F{lote}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="0" width="100" height="20" uuid="b063cb13-0bce-4755-a43f-91ca5e710faf"/>
+				<textFieldExpression><![CDATA[$F{idmedicamentos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="0" width="110" height="20" uuid="41d16cc3-d99a-47f9-9877-78f54faacba2"/>
+				<textFieldExpression><![CDATA[$F{codigodebarras}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="a634b972-6e68-439e-9b3a-d1e3a24f52b3"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

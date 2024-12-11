@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9b352b6e-08f0-4bf6-a441-195d3e66eda1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from doctores]]>
+	</queryString>
+	<field name="iddoctores" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="telefono" class="java.lang.String"/>
+	<field name="correo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="168" splitType="Stretch">
+			<staticText>
+				<reportElement x="129" y="12" width="114" height="20" uuid="1a2a062f-cba2-4107-a531-fc653d5f2cd9"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Espacio Animal ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="51" width="100" height="20" uuid="8e79c849-10e8-4c6f-be64-fc379e3f36fa"/>
+				<text><![CDATA[RUC: 12345-0]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="112" width="555" height="1" uuid="9062cc14-8688-4ac8-a2ab-1755828ac572"/>
+			</line>
+			<staticText>
+				<reportElement x="277" y="10" width="100" height="33" uuid="c2546817-e28a-4fd9-8fd8-ad76f1e451ad"/>
+				<text><![CDATA[Fecha y hora de impresion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="83" width="119" height="20" uuid="07c57659-edbc-4585-ad0e-0d85ad95813f"/>
+				<text><![CDATA[Telefono: 0986-356-074]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="115" width="531" height="38" uuid="c3be0f09-7f6d-490e-8241-f676eff6472b"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTADO DOCTORES]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="377" y="15" width="100" height="20" uuid="26b66d2d-3741-4ac2-9fff-bb8feb75c222"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="12" y="10" width="148" height="93" uuid="eeb294ea-7f1b-4980-b7f8-a607ff238d13"/>
+				<imageExpression><![CDATA[".\\animal.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="277" y="51" width="161" height="20" uuid="10ddf4da-1bec-43cc-a59e-f8c61c9b90da"/>
+				<text><![CDATA[Correo: espacioani@gmail.com]]></text>
+			</staticText>
+			<textField pattern="h.mm a">
+				<reportElement x="483" y="15" width="53" height="20" uuid="f0ccfd35-c2d0-4a37-98df-e6fbbc5b94ee"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="132" y="83" width="100" height="20" uuid="822ee3a1-cc9a-47c0-a251-3d1fdb8528f0"/>
+				<text><![CDATA[Direccion: Filadelfia ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="155" width="555" height="1" uuid="a3628246-6a0e-4fb5-bbd2-d47c8fcb500e"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="135" height="20" backcolor="#99FFFF" uuid="66d136a6-6334-4b2a-9fe9-3c6391955c6f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[IDDOCTORES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="135" y="0" width="119" height="20" backcolor="#99FFFF" uuid="dc3308c3-2a69-4267-9286-0134efafe133"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="254" y="0" width="117" height="20" backcolor="#99FFFF" uuid="a215ff15-7bce-485b-a259-ca1a44908e25"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[TELEFONO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="371" y="0" width="184" height="20" backcolor="#99FFFF" uuid="497c9770-ffd3-423e-917b-83d979f05063"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[CORREO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="29" y="0" width="100" height="20" uuid="eb8d0971-399d-4e3b-aba5-3904a31fabcc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{iddoctores}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="0" width="100" height="20" uuid="ba32332f-5cbb-4601-b824-9220d0267cf0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="263" y="0" width="100" height="20" uuid="74646fb8-373c-4347-86fc-8d6337ef689f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="0" width="129" height="20" uuid="d7f60616-d95d-4966-a225-d6e0cb753c72"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="01f2279d-39eb-4185-831f-6452b5f60175"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

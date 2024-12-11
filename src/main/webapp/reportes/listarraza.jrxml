@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="034e0931-418b-4083-bc63-a9610a32c8d9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from raza]]>
+	</queryString>
+	<field name="idraza" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="idespecies" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="167" splitType="Stretch">
+			<staticText>
+				<reportElement x="129" y="13" width="114" height="20" uuid="b70f4bea-a42d-4d7b-a9e9-8a35c9ae2879"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Espacio Animal ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="52" width="100" height="20" uuid="2874f35e-e95b-4f05-8c53-5bb55faf480c"/>
+				<text><![CDATA[RUC: 12345-0]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="113" width="555" height="1" uuid="740126fd-53d3-4901-845d-c008a3fb129a"/>
+			</line>
+			<staticText>
+				<reportElement x="277" y="11" width="100" height="33" uuid="de6f7336-2bfb-4040-96d9-a14ab9d87dec"/>
+				<text><![CDATA[Fecha y hora de impresion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="84" width="119" height="20" uuid="2f40df1e-8a5f-479e-8ce8-4f7158d72662"/>
+				<text><![CDATA[Telefono: 0986-356-074]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="118" width="531" height="38" uuid="f769f3ec-f82c-4279-b28a-08726a7f5d7f"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTADO RAZA]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="377" y="16" width="100" height="20" uuid="f568ce81-aa8e-4cde-b058-eb8c30d5c1f2"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="12" y="11" width="148" height="93" uuid="1691acbc-dfeb-43d0-80e7-f125ba3ae5a1"/>
+				<imageExpression><![CDATA[".\\animal.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="277" y="52" width="161" height="20" uuid="908c24ac-2780-4c15-b660-a0d6126be86e"/>
+				<text><![CDATA[Correo: espacioani@gmail.com]]></text>
+			</staticText>
+			<textField pattern="h.mm a">
+				<reportElement x="483" y="16" width="53" height="20" uuid="988e8c21-3c05-481e-bd4e-cd51771dd24b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="132" y="84" width="100" height="20" uuid="08dffe3c-6301-44fd-90e6-4a02457c7e5b"/>
+				<text><![CDATA[Direccion: Filadelfia ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="156" width="555" height="1" uuid="c8d35d9c-7d1d-47df-a768-2602e1d9f4ce"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="168" y="0" width="205" height="20" backcolor="#99FFFF" uuid="741fed1e-3dcc-49e3-bead-584e1e752e7e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="373" y="0" width="182" height="20" backcolor="#99FFFF" uuid="d7820623-036a-4211-8496-775f5e31185d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[IDESPECIE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="168" height="20" backcolor="#99FFFF" uuid="910caad2-e5a9-448d-bc9a-071ce0aecd05"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[IDRAZA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="68" y="0" width="100" height="20" uuid="f3aee515-b736-41c7-8d29-779f3312f7d7"/>
+				<textFieldExpression><![CDATA[$F{idraza}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="0" width="100" height="20" uuid="799536e6-9ad0-417b-a091-834b197c2931"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="31b3a676-ff03-4932-a92c-b3fd8f20fbb8"/>
+				<textFieldExpression><![CDATA[$F{idespecies}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="19" width="555" height="1" uuid="cc28b246-adf2-42ac-866a-c8a6fe5864fa"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

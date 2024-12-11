@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="25d8dfe1-6bad-47f7-94ec-c6aab41bca36">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idmedicamentos" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from medicamentos where idmedicamentos= $P{idmedicamentos};]]>
+	</queryString>
+	<field name="idmedicamentos" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="vencimiento" class="java.lang.String"/>
+	<field name="lote" class="java.lang.String"/>
+	<field name="codigodebarras" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="145" splitType="Stretch">
+			<staticText>
+				<reportElement x="63" y="102" width="426" height="42" uuid="5b3d92e3-213e-401c-9ad2-f4b25b8a3cc4"/>
+				<textElement textAlignment="Center">
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[Reporte de Medicamentos]]></text>
+			</staticText>
+			<image>
+				<reportElement x="35" y="0" width="148" height="93" uuid="98bb8c43-18a7-4774-aa0f-928b601a29b7"/>
+				<imageExpression><![CDATA[".\\animal.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="155" y="73" width="100" height="20" uuid="c49b92e6-03af-4701-a1c9-fee901bb2615"/>
+				<text><![CDATA[Direccion: Filadelfia ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="400" y="5" width="100" height="20" uuid="44159c87-6cb6-4f32-9816-78f11cef127b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="152" y="2" width="114" height="20" uuid="ffcca06b-27d6-429e-9def-8d78ce93be9b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Espacio Animal ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="73" width="119" height="20" uuid="b3a88382-dd81-4f25-b060-9b2e5fe6e7c8"/>
+				<text><![CDATA[Telefono: 0986-356-074]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="41" width="100" height="20" uuid="f62919a0-f207-40df-b94b-227ed195dd83"/>
+				<text><![CDATA[RUC: 12345-0]]></text>
+			</staticText>
+			<textField pattern="h.mm a">
+				<reportElement x="494" y="4" width="53" height="20" uuid="9267a565-9917-43a2-9391-2e735213a8cd"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="33" uuid="3cb1d5e6-c157-410d-a5d2-3938246f025f"/>
+				<text><![CDATA[Fecha y hora de impresion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="41" width="161" height="20" uuid="7f5bd39b-1c5a-46ff-bc70-7e64a0fea5a5"/>
+				<text><![CDATA[Correo: espacioani@gmail.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="102" width="555" height="1" uuid="2326d14a-e353-4d68-b5fe-12a672b34011"/>
+			</line>
+			<line>
+				<reportElement x="0" y="144" width="555" height="1" uuid="246a830a-3808-43ba-a3f4-75b05e6abc15"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="264" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="38" y="25" width="466" height="179" uuid="2046e9e5-cb2a-47bd-92de-e9f31f10a953"/>
+			</rectangle>
+			<textField>
+				<reportElement x="204" y="36" width="100" height="20" uuid="ed9e905a-d1f2-4e3d-8295-3c74e1f53f7c"/>
+				<textFieldExpression><![CDATA[$F{idmedicamentos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="63" y="35" width="100" height="20" backcolor="#99FFFF" uuid="6d192d8e-5bab-4cfc-99e4-6a6c1fe23459"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[idmedicamentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="63" y="72" width="100" height="20" backcolor="#99FFFF" uuid="9cb9aea7-39f0-4b0d-9c1e-00a466ce46d3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="204" y="72" width="100" height="20" uuid="938172e7-8fa0-42c1-a4cd-9e6149edbf78"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="63" y="105" width="100" height="20" backcolor="#99FFFF" uuid="b7f21f09-f7b2-4c6e-94a1-d76d77328fe0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[vencimiento]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="204" y="105" width="100" height="20" uuid="33ec9197-575f-458a-af58-e6b1b17d2e51"/>
+				<textFieldExpression><![CDATA[$F{vencimiento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="63" y="138" width="100" height="20" backcolor="#99FFFF" uuid="cc43a5b4-ca00-4a82-863e-c6d087ead236"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[lote]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="138" width="100" height="20" uuid="588fb9e3-12bf-4a3e-b1a8-9ae28df3c8f0"/>
+				<textFieldExpression><![CDATA[$F{lote}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="63" y="173" width="100" height="20" backcolor="#99FFFF" uuid="9d5bcaf3-8893-468d-b7e0-e490c4f96197"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[codigodebarras]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="173" width="100" height="20" uuid="fca4b80b-603e-4e89-88e9-6559b2673796"/>
+				<textFieldExpression><![CDATA[$F{codigodebarras}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="38" y="64" width="466" height="1" uuid="4b0c49d5-c0c5-4371-99e7-73fc52909c69"/>
+			</line>
+			<line>
+				<reportElement x="39" y="98" width="466" height="1" uuid="52c74035-7dd5-4944-b12b-f34702267f08"/>
+			</line>
+			<line>
+				<reportElement x="39" y="129" width="466" height="1" uuid="586f7b1e-5114-4b61-be3e-8acff87d7eb0"/>
+			</line>
+			<line>
+				<reportElement x="39" y="163" width="466" height="1" uuid="7cdba766-e051-4f4a-8b1d-ad48d74d64f2"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="277" y="16" width="100" height="20" uuid="2c4ee539-4a6a-4b07-8afd-b66c74229862"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="16" width="80" height="20" uuid="85625108-d18f-4dc2-a033-e22d74a71e24"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b277de2f-1bb7-4638-a2a0-4df4e28e5850">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="21"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select p.idpaciente,p.nombre,p.edad,p.sexo,p.peso,p.idclientes,r.nombre as razanombre from pacientes p inner join raza r on p.idraza= r.idraza]]>
+	</queryString>
+	<field name="idpaciente" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="edad" class="java.lang.Integer"/>
+	<field name="sexo" class="java.lang.String"/>
+	<field name="peso" class="java.lang.Integer"/>
+	<field name="idclientes" class="java.lang.Integer"/>
+	<field name="razanombre" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="157" splitType="Stretch">
+			<staticText>
+				<reportElement x="129" y="13" width="114" height="20" uuid="306269df-6856-4bdf-8577-346991c2ea11"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Espacio Animal ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="52" width="100" height="20" uuid="59686a7d-6c61-4da2-b5e4-0a21f9b6036f"/>
+				<text><![CDATA[RUC: 12345-0]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="113" width="555" height="1" uuid="402f20a1-bc03-4550-b108-020603090028"/>
+			</line>
+			<staticText>
+				<reportElement x="277" y="11" width="100" height="33" uuid="152f522d-582f-43ff-a4d4-a5c01b48eeb6"/>
+				<text><![CDATA[Fecha y hora de impresion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="84" width="119" height="20" uuid="ed5ce950-5758-4889-a515-2d1394e65827"/>
+				<text><![CDATA[Telefono: 0986-356-074]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="118" width="531" height="38" uuid="788b2cb7-841b-470e-9773-94d432f4e1ae"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTADO PACIENTES]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="377" y="16" width="100" height="20" uuid="07053785-22ed-4707-bcd5-eaf7af7d6d2f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="12" y="11" width="148" height="93" uuid="ea250184-c5b8-46b3-a015-b62ff4cd6d30"/>
+				<imageExpression><![CDATA[".\\animal.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="277" y="52" width="161" height="20" uuid="a083ca10-5d3f-4ece-b5cf-32eda5b83542"/>
+				<text><![CDATA[Correo: espacioani@gmail.com]]></text>
+			</staticText>
+			<textField pattern="h.mm a">
+				<reportElement x="483" y="16" width="53" height="20" uuid="493d055b-8fc2-456d-bb6e-6635f5ff6c57"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="132" y="84" width="100" height="20" uuid="07a855a0-d4d1-4645-a33d-ba0f30b3da4f"/>
+				<text><![CDATA[Direccion: Filadelfia ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="156" width="555" height="1" uuid="afcece81-7e71-4d93-b721-2c25c52301b5"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="83" height="20" backcolor="#99FFFF" uuid="500ba91c-126e-4b55-b9fb-89f2a689476e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[IDPACIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="83" y="0" width="85" height="20" backcolor="#99FFFF" uuid="54fb6b64-0f8d-4bc7-b5fe-e58bb9affc10"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="168" y="0" width="61" height="20" backcolor="#99FFFF" uuid="50e509e8-c3aa-4a9b-936f-c0bc1b9a39f8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[RAZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="229" y="0" width="69" height="20" backcolor="#99FFFF" uuid="d7957e20-c859-4ac8-9430-2728c082d729"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[EDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="298" y="0" width="86" height="20" backcolor="#99FFFF" uuid="bce191d5-ccb1-4868-b3dd-0f062f977c1f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[SEXO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="384" y="0" width="79" height="20" backcolor="#99FFFF" uuid="f40ddc66-c9c9-4749-8d33-f422dce7eacd"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[PESO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="463" y="0" width="81" height="20" backcolor="#99FFFF" uuid="7f10cb18-6b0d-4ccb-8a19-e730d5fa05ca"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[IDCLIENTES]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="23" y="1" width="60" height="20" uuid="9a00e4d8-706a-41e8-bda5-5e17019b5fb1"/>
+				<textFieldExpression><![CDATA[$F{idpaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="0" width="59" height="20" uuid="6a6c2488-626d-4c86-a157-1dd3c0ed8e3a"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="-1" width="20" height="20" uuid="3b5eacf6-ad0f-422a-bc8f-e30c010baa45"/>
+				<textFieldExpression><![CDATA[$F{edad}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="22" width="555" height="1" uuid="ab1c3476-ae6b-4850-afba-e5eaeb132593"/>
+			</line>
+			<textField>
+				<reportElement x="321" y="2" width="59" height="20" uuid="1d4f8a60-efb7-4416-87c4-e8f906707c58"/>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="412" y="0" width="43" height="20" uuid="56bcc042-8712-4a0b-ab70-a7c64d31cd4a"/>
+				<textFieldExpression><![CDATA[$F{peso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="0" width="41" height="20" uuid="12d93167-fb3f-492c-a9f2-f28c1154f972"/>
+				<textFieldExpression><![CDATA[$F{idclientes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="175" y="2" width="100" height="20" uuid="61a28069-05b5-43da-b026-3d37c475e433"/>
+				<textFieldExpression><![CDATA[$F{razanombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="24" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

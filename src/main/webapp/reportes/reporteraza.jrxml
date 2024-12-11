@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="32969232-d079-4bba-9d6a-2a4aec98006b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idraza" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from raza where idraza= $P{idraza};]]>
+	</queryString>
+	<field name="idraza" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="idespecies" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="158" splitType="Stretch">
+			<staticText>
+				<reportElement x="102" y="113" width="360" height="45" uuid="2c6c460a-de3a-4d1d-ba19-f1d8ca31d5f4"/>
+				<textElement textAlignment="Center">
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[Reporte de Raza]]></text>
+			</staticText>
+			<image>
+				<reportElement x="37" y="10" width="148" height="93" uuid="91befe23-23f4-4f87-baba-483db733f5d8"/>
+				<imageExpression><![CDATA[".\\animal.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="156" y="83" width="100" height="20" uuid="9596e253-d79e-47f0-b2b9-7a1d2bf58e53"/>
+				<text><![CDATA[Direccion: Filadelfia ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="401" y="15" width="100" height="20" uuid="36f1f12a-38ec-420a-82f6-0f08a59c6dc9"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="153" y="12" width="114" height="20" uuid="84c097dc-ff16-4045-8a7d-786147fbbf30"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Espacio Animal ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="83" width="119" height="20" uuid="2d21879f-25a0-4c01-a88c-b7a3876f289c"/>
+				<text><![CDATA[Telefono: 0986-356-074]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="51" width="100" height="20" uuid="55f289be-48bb-4bad-b343-9d2521b960de"/>
+				<text><![CDATA[RUC: 12345-0]]></text>
+			</staticText>
+			<textField pattern="h.mm a">
+				<reportElement x="495" y="14" width="53" height="20" uuid="7bb4ce11-67e2-4f85-9108-258687584403"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="301" y="10" width="100" height="33" uuid="2f9c6f5e-1426-4e50-ac4b-36bcbd130181"/>
+				<text><![CDATA[Fecha y hora de impresion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="51" width="161" height="20" uuid="a96b1673-bad2-471e-926e-8cf2cef5d38e"/>
+				<text><![CDATA[Correo: espacioani@gmail.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="112" width="555" height="1" uuid="13b7624b-3a02-4b02-b12b-d1db257af58d"/>
+			</line>
+			<line>
+				<reportElement x="1" y="154" width="555" height="1" uuid="d716de2c-35cf-489b-a60c-643059d2661e"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="160">
+			<rectangle radius="10">
+				<reportElement x="16" y="11" width="516" height="113" uuid="d996318f-c422-42b4-8433-2c64c7440900"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="34" y="21" width="100" height="20" backcolor="#99FFFF" uuid="3ec6839e-3be9-410b-848b-613f5e0d7c39"/>
+				<text><![CDATA[idraza]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="184" y="21" width="100" height="20" uuid="8f26fd77-20f1-4b96-8d55-a1566602de01"/>
+				<textFieldExpression><![CDATA[$F{idraza}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="32" y="62" width="100" height="20" backcolor="#99FFFF" uuid="bbd1128d-5ea3-43e3-a2ff-20ce0c767794"/>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="184" y="62" width="100" height="20" uuid="1c1d5b62-04ee-4ce4-9330-4cb7c7200d75"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="34" y="96" width="100" height="20" backcolor="#99FFFF" uuid="e5536f08-4173-45e8-b946-cdf269abb46b"/>
+				<text><![CDATA[idespecies]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="185" y="96" width="100" height="20" uuid="f5d67106-cf37-4a5f-b57a-ec913f1b0e62"/>
+				<textFieldExpression><![CDATA[$F{idespecies}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="16" y="47" width="516" height="1" uuid="5eb8e766-e260-4b4f-a014-0e4e417fa5c9"/>
+			</line>
+			<line>
+				<reportElement x="16" y="89" width="516" height="1" uuid="566c23cb-7de5-4012-bb3c-2be213cd3b06"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="204" y="26" width="80" height="20" uuid="a8d8b0b0-3214-4bfd-a43b-ad943aaa560c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="301" y="26" width="40" height="20" uuid="7e3e4ce2-a82e-427e-bdb3-7169caa27b61"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
